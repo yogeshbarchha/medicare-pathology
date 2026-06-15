@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PathoCare Diagnostics</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f7fbff;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Header */
+header{
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#0077ff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+.btn{
+    background:linear-gradient(135deg,#0077ff,#00c6ff);
+    color:white;
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    display:inline-block;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Hero */
+.hero{
+    padding:90px 0;
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* Features */
+.features{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#0d1b3d;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:12px;
+    color:#0077ff;
+}
+
+/* Stats */
+.stats{
+    background:linear-gradient(135deg,#0077ff,#00c6ff);
+    color:white;
+    padding:70px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+}
+
+.stat h2{
+    font-size:42px;
+}
+
+/* CTA */
+.cta{
+    padding:90px 0;
+    text-align:center;
+}
+
+.cta-box{
+    background:white;
+    padding:60px;
+    border-radius:25px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.cta h2{
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+/* Footer */
+footer{
+    background:#0d1b3d;
+    color:white;
+    padding:30px 0;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+.hero-content{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.stats-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">PathoCare</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Tests</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+<a href="#" class="btn">Book Test</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+
+<div>
+<h1>Advanced Pathology & Diagnostic Laboratory</h1>
+
+<p>
+Fast, accurate and trusted pathology services with
+state-of-the-art technology and experienced specialists.
+</p>
+
+<a href="#" class="btn">Schedule Appointment</a>
+</div>
+
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660" alt="Laboratory">
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="features">
+<div class="container">
+
+<div class="section-title">
+<h2>Our Diagnostic Services</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Blood Testing</h3>
+<p>Comprehensive blood analysis with accurate reporting and quick turnaround times.</p>
+</div>
+
+<div class="card">
+<h3>Health Packages</h3>
+<p>Preventive health checkups designed for individuals and families.</p>
+</div>
+
+<div class="card">
+<h3>Home Collection</h3>
+<p>Book sample collection at your doorstep for maximum convenience.</p>
+</div>
+
+<div class="card">
+<h3>Digital Reports</h3>
+<p>Secure online reports accessible anytime from any device.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h2>50K+</h2>
+<p>Patients Served</p>
+</div>
+
+<div class="stat">
+<h2>120+</h2>
+<p>Diagnostic Tests</p>
+</div>
+
+<div class="stat">
+<h2>99%</h2>
+<p>Accuracy Rate</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+
+<div class="cta-box">
+<h2>Book Your Diagnostic Test Today</h2>
+
+<p style="margin-bottom:25px;color:#666;">
+Get reliable results from certified pathology experts.
+</p>
+
+<a href="#" class="btn">Book Appointment</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>© 2026 PathoCare Diagnostics. All Rights Reserved.</p>
+</div>
+</footer>
+
+</body>
+</html>
+```
