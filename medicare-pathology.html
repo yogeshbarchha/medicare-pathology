@@ -1,370 +1,347 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Medanta Pathology Lab</title>
+<title>Yogesh Barchha | Professional Badminton Coach</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root{
-    --flamingo:#f25c78;
-    --midnight:#14213d;
-    --light:#f8fafc;
-    --text:#374151;
-    --white:#ffffff;
-}
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:var(--light);
-    color:var(--text);
+    background:#081b29;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-.container{
-    width:90%;
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.3);
+    z-index:999;
+}
+
+.nav-container{
     max-width:1200px;
     margin:auto;
-}
-
-/* Header */
-header{
-    position:sticky;
-    top:0;
-    background:#fff;
-    z-index:1000;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
-}
-
-nav{
+    padding:20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 0;
 }
 
 .logo{
     font-size:28px;
     font-weight:700;
-    color:var(--midnight);
+    color:#00e5ff;
 }
 
-.logo span{
-    color:var(--flamingo);
-}
-
-nav ul{
-    list-style:none;
+.nav-links{
     display:flex;
-    gap:30px;
+    gap:25px;
 }
 
-nav a{
+.nav-links a{
+    color:white;
     text-decoration:none;
-    color:var(--midnight);
-    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00e5ff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(8,27,41,.7),rgba(8,27,41,.9)),
+    url('https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=1600') center/cover;
+}
+
+.hero-content{
+    max-width:900px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#00e5ff;
+    margin-bottom:20px;
+    min-height:50px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    line-height:1.8;
+    margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
-    background:var(--flamingo);
-    color:#fff;
+    padding:15px 35px;
+    background:#00e5ff;
+    color:#081b29;
+    border-radius:50px;
     text-decoration:none;
-    padding:14px 28px;
-    border-radius:40px;
     font-weight:600;
     transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-5px);
 }
 
-/* Hero */
-.hero{
-    background:linear-gradient(135deg,var(--midnight),#22345f);
-    color:white;
-    padding:100px 0;
+/* SECTION */
+section{
+    padding:100px 20px;
 }
 
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.2fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.hero h1{
-    font-size:58px;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:18px;
-    margin-bottom:30px;
-    opacity:.9;
-}
-
-.hero-image{
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
-    border-radius:24px;
-    padding:30px;
-}
-
-.hero-image img{
-    width:100%;
-    border-radius:18px;
-}
-
-/* Features */
-.section{
-    padding:90px 0;
+.container{
+    max-width:1200px;
+    margin:auto;
 }
 
 .section-title{
     text-align:center;
+    font-size:2.5rem;
     margin-bottom:50px;
 }
 
-.section-title h2{
-    color:var(--midnight);
-    font-size:42px;
-}
-
-.cards{
+/* ABOUT */
+.about-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
 }
 
 .card{
-    background:white;
-    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
     padding:30px;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-    transition:.3s;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
 }
 
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h3{
-    color:var(--midnight);
-    margin-bottom:12px;
-}
-
-.icon{
-    width:60px;
-    height:60px;
-    border-radius:16px;
-    background:rgba(242,92,120,.15);
-    color:var(--flamingo);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-/* Stats */
-.stats{
-    background:var(--midnight);
-    color:white;
-}
-
-.stats-grid{
+/* SERVICES */
+.services{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    text-align:center;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
-.stat h3{
-    font-size:42px;
-    color:var(--flamingo);
+.service-card{
+    background:rgba(255,255,255,.05);
+    padding:30px;
+    border-radius:20px;
+    transition:.4s;
 }
 
-/* CTA */
-.cta{
-    text-align:center;
+.service-card:hover{
+    transform:translateY(-10px);
 }
 
-.cta-box{
-    background:white;
-    border-radius:24px;
-    padding:60px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-}
-
-.cta h2{
-    color:var(--midnight);
+.service-card h3{
+    color:#00e5ff;
     margin-bottom:15px;
 }
 
-footer{
-    background:var(--midnight);
-    color:white;
+/* CONTACT */
+.contact{
     text-align:center;
-    padding:25px;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:1.1rem;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#06131d;
 }
 
 @media(max-width:768px){
 
-.hero-grid{
+.hero h1{
+    font-size:2.5rem;
+}
+
+.about-grid{
     grid-template-columns:1fr;
 }
 
-.hero h1{
-    font-size:40px;
-}
-
-.stats-grid{
-    grid-template-columns:repeat(2,1fr);
+.nav-links{
+    display:none;
 }
 }
 </style>
 </head>
+
 <body>
 
-<header>
-<div class="container">
-<nav>
-<div class="logo">Medanta <span>Pathology</span></div>
+<nav class="navbar">
+<div class="nav-container">
+<div class="logo">Yogesh Barchha</div>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Tests</a></li>
-<li><a href="#">Packages</a></li>
-<li><a href="#">Reports</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-
-<a href="#" class="btn">Book Test</a>
-</nav>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Coaching</a>
+<a href="#contact">Contact</a>
 </div>
-</header>
+</div>
+</nav>
 
 <section class="hero">
-<div class="container">
-<div class="hero-grid">
+<div class="hero-content">
 
-<div>
-<h1>Trusted Diagnostics. Accurate Results.</h1>
+<h1>Yogesh Barchha</h1>
+
+<h2 id="typing"></h2>
 
 <p>
-Advanced pathology services powered by modern laboratory
-technology, expert pathologists, and fast digital reporting.
+Professional Badminton Player and Certified Badminton Coach with over 10 years of coaching experience. Passionate about developing athletes of all ages and skill levels through structured training programs, advanced techniques, match strategies, fitness conditioning, and mental preparation.
 </p>
 
-<a href="#" class="btn">Schedule Appointment</a>
-</div>
-
-<div class="hero-image">
-<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=900"
-alt="Laboratory">
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-<div class="section-title">
-<h2>Our Diagnostic Services</h2>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<div class="icon">🩸</div>
-<h3>Blood Testing</h3>
-<p>Comprehensive blood investigations with high accuracy.</p>
-</div>
-
-<div class="card">
-<div class="icon">🏥</div>
-<h3>Health Packages</h3>
-<p>Preventive health checkups for individuals and families.</p>
-</div>
-
-<div class="card">
-<div class="icon">🚑</div>
-<h3>Home Collection</h3>
-<p>Convenient sample collection at your doorstep.</p>
-</div>
-
-<div class="card">
-<div class="icon">📄</div>
-<h3>Digital Reports</h3>
-<p>Secure online access to your pathology reports.</p>
-</div>
-
-</div>
+<a href="#contact" class="btn">Book Coaching Session</a>
 
 </div>
 </section>
 
-<section class="section stats">
+<section id="about">
 <div class="container">
 
-<div class="stats-grid">
+<h2 class="section-title">About Me</h2>
 
-<div class="stat">
-<h3>50K+</h3>
-<p>Patients Served</p>
-</div>
+<div class="about-grid">
 
-<div class="stat">
-<h3>150+</h3>
-<p>Tests Available</p>
-</div>
-
-<div class="stat">
-<h3>99%</h3>
-<p>Accuracy Rate</p>
-</div>
-
-<div class="stat">
-<h3>24/7</h3>
-<p>Support</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="section cta">
-<div class="container">
-
-<div class="cta-box">
-<h2>Book Your Diagnostic Test Today</h2>
-
-<p style="margin-bottom:25px;">
-Fast appointments, expert diagnostics, and secure online reports.
+<div class="card">
+<h3>Professional Experience</h3>
+<p>
+With more than a decade of coaching experience, I have trained beginners, intermediate players, and competitive athletes. My coaching methodology focuses on technical skills, footwork, agility, endurance, and tactical gameplay.
 </p>
-
-<a href="#" class="btn">Book Now</a>
 </div>
+
+<div class="card">
+<h3>Coaching Philosophy</h3>
+<p>
+I believe every player has unique strengths. My goal is to create personalized training programs that improve performance, confidence, discipline, and consistency both on and off the court.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<h2 class="section-title">Coaching Programs</h2>
+
+<div class="services">
+
+<div class="service-card">
+<h3>Beginner Training</h3>
+<p>Fundamentals, grip techniques, footwork, and basic game understanding.</p>
+</div>
+
+<div class="service-card">
+<h3>Advanced Coaching</h3>
+<p>Match strategy, shot selection, movement optimization, and competitive preparation.</p>
+</div>
+
+<div class="service-card">
+<h3>Fitness & Conditioning</h3>
+<p>Strength, endurance, agility, speed, and injury prevention programs.</p>
+</div>
+
+<div class="service-card">
+<h3>Tournament Preparation</h3>
+<p>Professional guidance for district, state, and national-level competitions.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact">
+
+<h2 class="section-title">Get In Touch</h2>
+
+<p>📞 +91 9669615648</p>
+<p>📧 barchhayogesh@gmail.com</p>
+<p>Available for personal coaching, academy training, workshops, and tournament preparation.</p>
+
+<a href="tel:+919669615648" class="btn">Call Now</a>
 
 </div>
 </section>
 
 <footer>
-<p>© 2026 Medanta Pathology Lab. All Rights Reserved.</p>
+<p>© 2026 Yogesh Barchha | Professional Badminton Coach</p>
 </footer>
+
+<script>
+const text = [
+"Professional Badminton Player",
+"10+ Years Coaching Experience",
+"Tournament Preparation Expert",
+"Fitness & Skill Development Coach"
+];
+
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type(){
+
+if(count === text.length){
+count = 0;
+}
+
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.getElementById('typing').textContent = letter;
+
+if(letter.length === currentText.length){
+count++;
+index = 0;
+setTimeout(type,1500);
+}else{
+setTimeout(type,100);
+}
+
+})();
+</script>
 
 </body>
 </html>
