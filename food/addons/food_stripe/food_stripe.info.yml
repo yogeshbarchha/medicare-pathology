@@ -1,9 +1,0 @@
-name: Food Stripe integration
-description: Provides Stripe integration for Food module.
-package: Food
-type: module
-
-dependencies:
-    - food
-
-core: 8.x
