@@ -1,24 +1,32 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PathoCare Diagnostics</title>
+<title>Medanta Pathology Lab</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+    --flamingo:#f25c78;
+    --midnight:#14213d;
+    --light:#f8fafc;
+    --text:#374151;
+    --white:#ffffff;
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#f7fbff;
-    color:#222;
-    line-height:1.6;
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--text);
 }
 
 .container{
@@ -29,45 +37,50 @@ body{
 
 /* Header */
 header{
-    background:white;
-    box-shadow:0 2px 15px rgba(0,0,0,0.08);
     position:sticky;
     top:0;
-    z-index:100;
+    background:#fff;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
 }
 
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 0;
+    padding:18px 0;
 }
 
 .logo{
     font-size:28px;
     font-weight:700;
-    color:#0077ff;
+    color:var(--midnight);
+}
+
+.logo span{
+    color:var(--flamingo);
 }
 
 nav ul{
-    display:flex;
     list-style:none;
+    display:flex;
     gap:30px;
 }
 
 nav a{
     text-decoration:none;
-    color:#333;
+    color:var(--midnight);
     font-weight:500;
 }
 
 .btn{
-    background:linear-gradient(135deg,#0077ff,#00c6ff);
-    color:white;
-    padding:12px 24px;
-    border-radius:30px;
-    text-decoration:none;
     display:inline-block;
+    background:var(--flamingo);
+    color:#fff;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:40px;
+    font-weight:600;
     transition:.3s;
 }
 
@@ -77,36 +90,45 @@ nav a{
 
 /* Hero */
 .hero{
-    padding:90px 0;
+    background:linear-gradient(135deg,var(--midnight),#22345f);
+    color:white;
+    padding:100px 0;
 }
 
-.hero-content{
+.hero-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1.2fr 1fr;
     gap:50px;
     align-items:center;
 }
 
 .hero h1{
-    font-size:54px;
+    font-size:58px;
     line-height:1.1;
     margin-bottom:20px;
 }
 
 .hero p{
     font-size:18px;
-    color:#666;
     margin-bottom:30px;
+    opacity:.9;
+}
+
+.hero-image{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:30px;
 }
 
 .hero-image img{
     width:100%;
-    border-radius:20px;
+    border-radius:18px;
 }
 
 /* Features */
-.features{
-    padding:80px 0;
+.section{
+    padding:90px 0;
 }
 
 .section-title{
@@ -115,21 +137,21 @@ nav a{
 }
 
 .section-title h2{
-    font-size:40px;
-    color:#0d1b3d;
+    color:var(--midnight);
+    font-size:42px;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
 
 .card{
     background:white;
+    border-radius:20px;
     padding:30px;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
     transition:.3s;
 }
 
@@ -138,83 +160,93 @@ nav a{
 }
 
 .card h3{
+    color:var(--midnight);
     margin-bottom:12px;
-    color:#0077ff;
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:16px;
+    background:rgba(242,92,120,.15);
+    color:var(--flamingo);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    margin-bottom:20px;
 }
 
 /* Stats */
 .stats{
-    background:linear-gradient(135deg,#0077ff,#00c6ff);
+    background:var(--midnight);
     color:white;
-    padding:70px 0;
 }
 
 .stats-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
+    gap:20px;
     text-align:center;
 }
 
-.stat h2{
+.stat h3{
     font-size:42px;
+    color:var(--flamingo);
 }
 
 /* CTA */
 .cta{
-    padding:90px 0;
     text-align:center;
 }
 
 .cta-box{
     background:white;
+    border-radius:24px;
     padding:60px;
-    border-radius:25px;
-    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
 .cta h2{
-    margin-bottom:20px;
-    font-size:38px;
+    color:var(--midnight);
+    margin-bottom:15px;
 }
 
-/* Footer */
 footer{
-    background:#0d1b3d;
+    background:var(--midnight);
     color:white;
-    padding:30px 0;
     text-align:center;
+    padding:25px;
 }
 
 @media(max-width:768px){
 
-.hero-content{
+.hero-grid{
     grid-template-columns:1fr;
 }
 
 .hero h1{
-    font-size:38px;
+    font-size:40px;
 }
 
 .stats-grid{
     grid-template-columns:repeat(2,1fr);
-    gap:30px;
 }
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="container">
 <nav>
-<div class="logo">PathoCare</div>
+<div class="logo">Medanta <span>Pathology</span></div>
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
 <li><a href="#">Tests</a></li>
-<li><a href="#">About</a></li>
+<li><a href="#">Packages</a></li>
+<li><a href="#">Reports</a></li>
 <li><a href="#">Contact</a></li>
 </ul>
 
@@ -225,28 +257,29 @@ footer{
 
 <section class="hero">
 <div class="container">
-<div class="hero-content">
+<div class="hero-grid">
 
 <div>
-<h1>Advanced Pathology & Diagnostic Laboratory</h1>
+<h1>Trusted Diagnostics. Accurate Results.</h1>
 
 <p>
-Fast, accurate and trusted pathology services with
-state-of-the-art technology and experienced specialists.
+Advanced pathology services powered by modern laboratory
+technology, expert pathologists, and fast digital reporting.
 </p>
 
 <a href="#" class="btn">Schedule Appointment</a>
 </div>
 
 <div class="hero-image">
-<img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660" alt="Laboratory">
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=900"
+alt="Laboratory">
 </div>
 
 </div>
 </div>
 </section>
 
-<section class="features">
+<section class="section">
 <div class="container">
 
 <div class="section-title">
@@ -256,23 +289,27 @@ state-of-the-art technology and experienced specialists.
 <div class="cards">
 
 <div class="card">
+<div class="icon">🩸</div>
 <h3>Blood Testing</h3>
-<p>Comprehensive blood analysis with accurate reporting and quick turnaround times.</p>
+<p>Comprehensive blood investigations with high accuracy.</p>
 </div>
 
 <div class="card">
+<div class="icon">🏥</div>
 <h3>Health Packages</h3>
-<p>Preventive health checkups designed for individuals and families.</p>
+<p>Preventive health checkups for individuals and families.</p>
 </div>
 
 <div class="card">
+<div class="icon">🚑</div>
 <h3>Home Collection</h3>
-<p>Book sample collection at your doorstep for maximum convenience.</p>
+<p>Convenient sample collection at your doorstep.</p>
 </div>
 
 <div class="card">
+<div class="icon">📄</div>
 <h3>Digital Reports</h3>
-<p>Secure online reports accessible anytime from any device.</p>
+<p>Secure online access to your pathology reports.</p>
 </div>
 
 </div>
@@ -280,28 +317,28 @@ state-of-the-art technology and experienced specialists.
 </div>
 </section>
 
-<section class="stats">
+<section class="section stats">
 <div class="container">
 
 <div class="stats-grid">
 
 <div class="stat">
-<h2>50K+</h2>
+<h3>50K+</h3>
 <p>Patients Served</p>
 </div>
 
 <div class="stat">
-<h2>120+</h2>
-<p>Diagnostic Tests</p>
+<h3>150+</h3>
+<p>Tests Available</p>
 </div>
 
 <div class="stat">
-<h2>99%</h2>
+<h3>99%</h3>
 <p>Accuracy Rate</p>
 </div>
 
 <div class="stat">
-<h2>24/7</h2>
+<h3>24/7</h3>
 <p>Support</p>
 </div>
 
@@ -310,26 +347,24 @@ state-of-the-art technology and experienced specialists.
 </div>
 </section>
 
-<section class="cta">
+<section class="section cta">
 <div class="container">
 
 <div class="cta-box">
 <h2>Book Your Diagnostic Test Today</h2>
 
-<p style="margin-bottom:25px;color:#666;">
-Get reliable results from certified pathology experts.
+<p style="margin-bottom:25px;">
+Fast appointments, expert diagnostics, and secure online reports.
 </p>
 
-<a href="#" class="btn">Book Appointment</a>
+<a href="#" class="btn">Book Now</a>
 </div>
 
 </div>
 </section>
 
 <footer>
-<div class="container">
-<p>© 2026 PathoCare Diagnostics. All Rights Reserved.</p>
-</div>
+<p>© 2026 Medanta Pathology Lab. All Rights Reserved.</p>
 </footer>
 
 </body>
